@@ -180,6 +180,6 @@ public struct SaveResultModel: Encodable {
     func toDic() -> [String:Any]? {
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
-        return try? JSONSerialization.jsonObject(with: encoder.encode(self)) as? [String: Any]
+        return try! JSONSerialization.jsonObject(with: encoder.encode(self)) as? [String: Any]
     }
 }
